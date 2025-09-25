@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopify-Task</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Nav bar -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo-b">
+                <div id="logo">Banana Threads</div>
+            </div>
+
+            <ul class="nav-items">
+                <a id="item-1" href="">Home </a>
+                <a id="item-2" href="">Catalog</a>
+                <a id="item-3" href="">Contact</a>
+            </ul>
+
+            <div class="logo-nav">
+                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href=""><i class="fa-solid fa-user"></i></a>
+                <a href=""><i class="fa-solid fa-bag-shopping"></i></a>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- Main View -->
+    <main class="main">
+        <div class="main-section">
+            <section class="left-section">
+                <img width="520px" src="assets/t101.png" alt="T-shirt" />
+                <img width="520px" src="assets/t102.png" alt="T-shirt" />
+            </section>
+
+            <section class="right-section">
+                <p class="store-name">MY STORE</p>
+                <h1 class="product-title">ASURA BY OKAMI OVERSIZED FIT</h1>
+                <div class="size-chart">
+                    <button class="chart-btn">Size Chart</button>
+                </div>
+                <p class="price">Rs. 1,799.99</p>
+                <p class="tax-note">Taxes included <span class="shipping">Shipping</span> calculated at checkout.</p>
+
+                <div id="sizeChartModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" src="assets/image.png" alt="Size Chart">
+                </div>
+
+                <div class="size-section">
+                    <label>Size</label>
+                    <div class="size-buttons">
+                        <button class="size-btn">S</button>
+                        <button class="size-btn">M</button>
+                        <button class="size-btn">L</button>
+                        <button class="size-btn">XL</button>
+                        <button class="size-btn">XXL</button>
+                    </div>
+                </div>
+
+                <div class="qty-section">
+                    <label>Quantity</label>
+                    <div class="qty-controls">
+                        <button class="qty-btn">-</button>
+                        <input class="qty-input" type="text" value="1" readonly />
+                        <button class="qty-btn">+</button>
+                    </div>
+                </div>
+
+                <button class="add-cart-btn">Add to cart</button>
+                <button class="buy-now-btn">Buy it now</button>
+            </section>
+        </div>
+    </main>
+
+
+    <!-- Gallery view -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">FEATURED COLLECTION</h2>
+                <p class="section-subtitle">Premium Streetwear</p>
+            </div>
+
+            <div class="gallery-container">
+                <button class="nav-arrows nav-prev" onclick="scrollGallery(-1)">‹</button>
+                <button class="nav-arrows nav-next" onclick="scrollGallery(1)">›</button>
+
+                <div class="gallery-wrapper" id="gallery">
+                    <div class="product-card fade-in" style="animation-delay: 0.1s">
+                        <div class="product-image">
+                            <img src="assets/ct01.png" alt="Fear of a Rich Planet Tee">
+                            <div class="discount-badge">60% off</div>
+                            <button class="add-btn">+</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="brand-name">ICECREAM</div>
+                            <h3 class="product-name">FEAR OF A RICH PLANET S/S SHIRT</h3>
+                            <div class="product-variant">FOUR LEAF CLOVER</div>
+                            <div class="price-container">
+                                <span class="current-price">₹3,999</span>
+                                <span class="original-price">₹9,999</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" style="animation-delay: 0.2s">
+                        <div class="product-image">
+                            <img src="assets/ct02.png" alt="Chains Tee">
+                            <div class="discount-badge">60% off</div>
+                            <button class="add-btn">+</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="brand-name">ICECREAM</div>
+                            <h3 class="product-name">CHAINS S/S TEE CHAINS S/S TEE</h3>
+                            <div class="product-variant">BLACK</div>
+                            <div class="price-container">
+                                <span class="current-price">₹3,999</span>
+                                <span class="original-price">₹9,999</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" style="animation-delay: 0.3s">
+                        <div class="product-image">
+                            <img src="assets/ct3.png" alt="Parachute Pant">
+                            <div class="discount-badge">35% off</div>
+                            <button class="add-btn">+</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="brand-name">Represent</div>
+                            <h3 class="product-name">OVERSIZED HOODIE</h3>
+                            <div class="product-variant">KHAKI</div>
+                            <div class="price-container">
+                                <span class="current-price">₹12,999</span>
+                                <span class="original-price">₹19,999</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" style="animation-delay: 0.4s">
+                        <div class="product-image">
+                            <img src="assets/ct4.png" alt="Spirits of Summer Tee">
+                            <div class="discount-badge">35% off</div>
+                            <button class="add-btn">+</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="brand-name">Represent</div>
+                            <h3 class="product-name">SPIRITS OF SUMMER TEE</h3>
+                            <div class="product-variant">MIST</div>
+                            <div class="price-container">
+                                <span class="current-price">₹7,799</span>
+                                <span class="original-price">₹11,999</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" style="animation-delay: 0.5s">
+                        <div class="product-image">
+                            <img src="assets/ct5.png" alt="Oversized Hoodie">
+                            <div class="discount-badge">50% off</div>
+                            <button class="add-btn">+</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="brand-name">ICECREAM</div>
+                            <h3 class="product-name">OVERSIZED TEE</h3>
+                            <div class="product-variant">FOREST GREEN</div>
+                            <div class="price-container">
+                                <span class="current-price">₹4,999</span>
+                                <span class="original-price">₹9,999</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" style="animation-delay: 0.6s">
+                        <div class="product-image">
+                            <img src="assets/ct6.png" alt="Track Pants">
+                            <div class="discount-badge">40% off</div>
+                            <button class="add-btn">+</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="brand-name">Represent</div>
+                            <h3 class="product-name">BB FLOATING CITY SS TEE</h3>
+                            <div class="product-variant">NAVY BLUE</div>
+                            <div class="price-container">
+                                <span class="current-price">₹8,999</span>
+                                <span class="original-price">₹14,999</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" style="animation-delay: 0.7s">
+                        <div class="product-image">
+                            <img src="assets/ct7.png" alt="Graphic Tee">
+                            <div class="discount-badge">55% off</div>
+                            <button class="add-btn">+</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="brand-name">ICECREAM</div>
+                            <h3 class="product-name">GRAPHIC S/S TEE</h3>
+                            <div class="product-variant">WHITE</div>
+                            <div class="price-container">
+                                <span class="current-price">₹3,499</span>
+                                <span class="original-price">₹7,999</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" style="animation-delay: 0.8s">
+                        <div class="product-image">
+                            <img src="assets/ct8.png" alt="Cargo Shorts">
+                            <div class="discount-badge">45% off</div>
+                            <button class="add-btn">+</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="brand-name">Represent</div>
+                            <h3 class="product-name">CAR CLUB T-SHIRT</h3>
+                            <div class="product-variant">OLIVE</div>
+                            <div class="price-container">
+                                <span class="current-price">₹6,999</span>
+                                <span class="original-price">₹12,999</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" style="animation-delay: 0.9s">
+                        <div class="product-image">
+                            <img src="assets/ct9.png" alt="Bomber Jacket">
+                            <div class="discount-badge">30% off</div>
+                            <button class="add-btn">+</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="brand-name">ICECREAM</div>
+                            <h3 class="product-name">DIAGRAM DRAWING #1 T-SHIRT</h3>
+                            <div class="product-variant">BLACK</div>
+                            <div class="price-container">
+                                <span class="current-price">₹14,999</span>
+                                <span class="original-price">₹21,999</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in" style="animation-delay: 1s">
+                        <div class="product-image">
+                            <img src="assets/ct10.png" alt="Denim Jacket">
+                            <div class="discount-badge">38% off</div>
+                            <button class="add-btn">+</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="brand-name">Represent</div>
+                            <h3 class="product-name">ORIGAMI TEE</h3>
+                            <div class="product-variant">WASHED WHITE</div>
+                            <div class="price-container">
+                                <span class="current-price">₹11,999</span>
+                                <span class="original-price">₹19,999</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <div class="scroll-dot active" onclick="scrollToSection(0)"></div>
+                <div class="scroll-dot" onclick="scrollToSection(1)"></div>
+                <div class="scroll-dot" onclick="scrollToSection(2)"></div>
+                <div class="scroll-dot" onclick="scrollToSection(3)"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div>&copy; 2025 Banana Threads. All rights reserved.</div>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms</a>
+            <a href="#">Contact</a>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
