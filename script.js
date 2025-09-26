@@ -32,6 +32,16 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentValue = parseInt(qtyInput.value, 10);
     qtyInput.value = currentValue + 1;
   });
+
+  // Navbar toggle for mobile
+  const navToggle = document.getElementById("navToggle");
+  const navMenu = document.querySelector(".nav-menu");
+
+  if (navToggle && navMenu) {
+    navToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
+  }
 });
 
 // Gallery view js -----------------
